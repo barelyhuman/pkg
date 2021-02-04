@@ -1,0 +1,16 @@
+{
+  "name": "tslibdir",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^3.12.1"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "build": "tsup src/index.js --minify",
+    "dev": "tsup src/index.js --watch"
+  }
+}
