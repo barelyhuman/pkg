@@ -1,15 +1,13 @@
-import { promises as fs } from 'fs';
-import path from 'path';
-
-export async function moduleOne() {
+/**
+ *
+ * @param {string} param
+ * @returns {Promise<boolean>}
+ */
+export async function moduleOne(param) {
   try {
-    const content = await fs.readFile(path.join(__dirname,'/index.js'));
-    console.log(content.toString());
+    console.log(param);
+    return true;
   } catch (err) {
-    console.error(err);
+    return false;
   }
-}
-
-if(require.main.filename === __filename){
-  moduleOne(); 
 }
