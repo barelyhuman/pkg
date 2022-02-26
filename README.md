@@ -1,2 +1,10 @@
 # node-bundle-template
-Simple Template with ts and node bundling uses [tsup](https://github.com/egoist/tsup);
+Simple setup to handle bundling and creating packages using nodejs and jsdoc for typedefs and esbuild 
+using [tsup](https://github.com/egoist/tsup) 
+
+## Stack
+
+- uvu 
+- prettier 
+- jsdoc 
+- esbuild with tsup 
