@@ -3,10 +3,12 @@
     "allowJs": true,
     "checkJs": true,
     "removeComments": true,
-    "emitDeclarationOnly": true,
+    "target": "esnext",
     "declaration": true,
     "outDir": "dist",
     "esModuleInterop": true,
     "lib": ["esnext", "dom"]
-  }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "tests"]
 }
