@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@antfu/ni': ^0.16.2
   '@barelyhuman/prettier-config': ^1.0.0
   eslint: ^8.18.0
   eslint-config-prettier: ^8.5.0
@@ -11,6 +12,7 @@ specifiers:
   typescript: ^4.7.4
 
 devDependencies:
+  '@antfu/ni': 0.16.2
   '@barelyhuman/prettier-config': 1.0.0
   eslint: 8.18.0
   eslint-config-prettier: 8.5.0_eslint@8.18.0
@@ -21,6 +23,11 @@ devDependencies:
   typescript: 4.7.4
 
 packages:
+
+  /@antfu/ni/0.16.2:
+    resolution: {integrity: sha512-HZH4I07EYKU4KZLtUYm/zEmaDIhaq51H/qu45uH1AcUPWqMGbB7evE/TnSr0SGInEA+oQs4Is5Vn/PmQhfuU5w==}
+    hasBin: true
+    dev: true
 
   /@barelyhuman/prettier-config/1.0.0:
     resolution: {integrity: sha512-qVTlGjryoqKzkDmc14Agj5DDSQYVRbl6uMfqh8oGdAefBD3TeoVKDfQ2L0T1GsHTP1k0LgJbR9n2cYBLdbKqQg==}
