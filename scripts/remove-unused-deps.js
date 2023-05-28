@@ -1,14 +1,17 @@
 #!/usr/bin/env node
 
-const { join, resolve } = require('path')
-const { writeFileSync } = require('fs')
-const depcheck = require('depcheck')
+import depcheck from 'depcheck'
+import { readFileSync, writeFileSync } from 'fs'
+import { dirname, join } from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const basePath = join(__dirname, '..')
 
 depcheck(join(__dirname, '..'), {}).then(unused => {
   const pkgPath = join(basePath, 'package.json')
-  const pkg = resolve(pkgPath) && require(pkgPath)
+  const pkg = JSON.parse(readFileSync(pkgPath, 'utf8'))
   const deps = pkg.dependencies
   Object.keys(pkg.dependencies).forEach(dep => {
     if (unused.dependencies.indexOf(dep) > -1) {
