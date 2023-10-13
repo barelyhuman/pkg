@@ -15,9 +15,12 @@ main()
 async function main() {
   const pkgJson = join(__dirname, '..', './package.json')
   const pkg = require.resolve(pkgJson) && require(pkgJson)
+
+  const minimalPkg = trimPackageJSON(pkg)
+
   await fs.writeFile(
     './dist/package.json',
-    JSON.stringify(pkg, null, 2),
+    JSON.stringify(minimalPkg, null, 2),
     'utf8'
   )
   await safeCopy('./README.md', './dist/README.md')
@@ -34,4 +37,12 @@ async function safeCopy(src, dest, force = false) {
     return
   }
   await fs.copyFile(src, dest, fs.constants.COPYFILE_FICLONE)
+}
+
+function trimPackageJSON(pkg) {
+  return Object.assign({}, pkg, {
+    devDependencies: undefined,
+    scripts: undefined,
+    prettier: undefined,
+  })
 }
