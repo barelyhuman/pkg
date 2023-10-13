@@ -22,6 +22,9 @@
     "test": "uvu -r esm tests",
     "test:ci": "c8 uvu -r esm tests "
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "prettier": "@barelyhuman/prettier-config",
   "devDependencies": {
     "@barelyhuman/prettier-config": "^1.0.0",
