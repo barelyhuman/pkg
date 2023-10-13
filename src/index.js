@@ -1,13 +1,8 @@
 /**
- *
- * @param {string} param
- * @returns {Promise<boolean>}
+ * @param {number} x
+ * @param {number} y
+ * @returns {Promise<number>}
  */
-export async function moduleOne(param) {
-  try {
-    console.log(param)
-    return true
-  } catch (err) {
-    return false
-  }
+export async function add(x, y) {
+  return x + y
 }
