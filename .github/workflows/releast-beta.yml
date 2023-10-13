@@ -6,7 +6,7 @@ on:
       - '*-beta.*'
 
 jobs:
-  publish:
+  publish_beta:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

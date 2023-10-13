@@ -1,10 +1,11 @@
-# node-bundle-template
-Simple setup to handle bundling and creating packages using nodejs and jsdoc for typedefs and esbuild 
-using [tsup](https://github.com/egoist/tsup) 
+# node-pkg
 
-## Stack
+Simple template to create an NPM package.
 
-- uvu 
-- prettier 
-- jsdoc 
-- esbuild with tsup 
+The following is handled for you.
+
+- Bundling
+- Typegen from JSDoc
+- A loose typescript config
+- a test runner
+- CI/CD for tests and package publishing ( Dual Channel => Beta / Release )
