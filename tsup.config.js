@@ -10,5 +10,8 @@ module.exports = defineConfig({
   onSuccess() {
     const out = execSync('node scripts/generate-package.js')
     console.log(out.toString())
+
+    const outSize = execSync('npm run size')
+    console.log(outSize.toString())
   },
 })

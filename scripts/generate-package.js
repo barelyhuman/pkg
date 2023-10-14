@@ -41,8 +41,9 @@ async function safeCopy(src, dest, force = false) {
 
 function trimPackageJSON(pkg) {
   return Object.assign({}, pkg, {
-    devDependencies: undefined,
-    scripts: undefined,
-    prettier: undefined,
+    'devDependencies': undefined,
+    'lint-staged': undefined,
+    'scripts': undefined,
+    'prettier': undefined,
   })
 }
