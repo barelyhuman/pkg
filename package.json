@@ -18,7 +18,7 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "next": "bumpp",
-    "fix": "eslint --fix .",
+    "fix": "prettier --write .",
     "test": "uvu -r esm tests",
     "test:ci": "c8 uvu -r esm tests ",
     "size": "sizesnap",
